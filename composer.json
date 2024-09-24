@@ -1,6 +1,6 @@
 {
   "name": "boardlead/laravel-survey",
-  "description": "Create surveys inside your Laravel app",
+  "description": "Create surveys inside your Laravel app - CSP Fork",
   "keywords": [
     "laravel",
     "survey"
@@ -9,8 +9,11 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "CSP",
-      "email": "csp@csp.com"
+      "name": "Matt Daneshvar",
+      "email": "matt.daneshvar@gmail.com"
+    },
+    {
+      "name": "Cause Strategy Partners"
     }
   ],
   "require": {
@@ -23,42 +26,24 @@
     "illuminate/http": "^10.0|^11.0",
     "laravel/legacy-factories": "^1.4"
   },
-
-  "config": {
-      "optimize-autoloader": true,
-      "preferred-install": "dist",
-      "sort-packages": true
-  },
-  
   "autoload": {
     "psr-4": {
-      "BLSurvey\\": "src/",
-      "Database\\Factories\\": "database/factories/",
-      "Database\\Seeders\\": "database/seeders/"
+      "MattDaneshvar\\Survey\\": "src/"
     }
   },
-
   "autoload-dev": {
     "psr-4": {
-      "BLSurvey\\Tests\\": "tests/"
+      "MattDaneshvar\\Survey\\Tests\\": "tests/"
     },
     "files": [
       "tests/utilities/helpers.php"
     ]
   },
-
   "extra": {
     "laravel": {
       "providers": [
-        "BLForm\\Providers\\SurveyServiceProvider"
+        "MattDaneshvar\\Survey\\SurveyServiceProvider"
       ]
     }
-  },
-  "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
-        ]
-    }
+  }
 }
