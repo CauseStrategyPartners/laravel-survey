@@ -9,8 +9,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "CSP",
-            "email": "csp@csp.com"
+            "name": "Matt Daneshvar",
+            "email": "matt.daneshvar@gmail.com"
     },
     {
       "name": "Cause Strategy Partners"
@@ -26,42 +26,24 @@
         "illuminate/http": "^10.0|^11.0|^12.0",
     "laravel/legacy-factories": "^1.4"
   },
-
-  "config": {
-      "optimize-autoloader": true,
-      "preferred-install": "dist",
-      "sort-packages": true
-  },
-
-    "autoload": {
-        "psr-4": {
-            "BLSurvey\\": "src/",
-      "Database\\Factories\\": "database/factories/",
-      "Database\\Seeders\\": "database/seeders/"
+  "autoload": {
+    "psr-4": {
+      "MattDaneshvar\\Survey\\": "src/"
     }
   },
-
-    "autoload-dev": {
-        "psr-4": {
-            "BLSurvey\\Tests\\": "tests/"
+  "autoload-dev": {
+    "psr-4": {
+      "MattDaneshvar\\Survey\\Tests\\": "tests/"
     },
     "files": [
       "tests/utilities/helpers.php"
     ]
   },
-
   "extra": {
     "laravel": {
       "providers": [
-        "BLForm\\Providers\\SurveyServiceProvider"
+        "MattDaneshvar\\Survey\\SurveyServiceProvider"
             ]
         }
-    },
-  "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
-        ]
     }
 }
