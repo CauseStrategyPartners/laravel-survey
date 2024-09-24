@@ -1,5 +1,5 @@
 {
-  "name": "matt-daneshvar/laravel-survey",
+  "name": "boardlead/laravel-survey",
   "description": "Create surveys inside your Laravel app",
   "keywords": [
     "laravel",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "Matt Daneshvar",
-      "email": "matt.daneshvar@gmail.com"
+      "name": "CSP",
+      "email": "csp@csp.com"
     }
   ],
   "require": {
@@ -23,24 +23,42 @@
     "illuminate/http": "^10.0|^11.0",
     "laravel/legacy-factories": "^1.4"
   },
+
+  "config": {
+      "optimize-autoloader": true,
+      "preferred-install": "dist",
+      "sort-packages": true
+  },
+  
   "autoload": {
     "psr-4": {
-      "MattDaneshvar\\Survey\\": "src/"
+      "BLSurvey\\": "src/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/"
     }
   },
+
   "autoload-dev": {
     "psr-4": {
-      "MattDaneshvar\\Survey\\Tests\\": "tests/"
+      "BLSurvey\\Tests\\": "tests/"
     },
     "files": [
       "tests/utilities/helpers.php"
     ]
   },
+
   "extra": {
     "laravel": {
       "providers": [
-        "MattDaneshvar\\Survey\\SurveyServiceProvider"
+        "BLForm\\Providers\\SurveyServiceProvider"
       ]
     }
-  }
+  },
+  "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump"
+        ]
+    }
 }
