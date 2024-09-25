@@ -27,7 +27,7 @@ class Section extends Model implements SectionContract
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'header'];
 
     /**
      * The questions of the section.
