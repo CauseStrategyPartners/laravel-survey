@@ -15,12 +15,13 @@ class Question extends Model implements QuestionContract
      *
      * @var array
      */
-    protected $fillable = ['type', 'options', 'content', 'rules', 'survey_id', 'statements'];
+    protected $fillable = ['type', 'options', 'content', 'rules', 'survey_id', 'statements', 'navigation_pivot'];
 
     protected $casts = [
         'rules' => 'array',
         'options' => 'array',
         'statements' => 'array',
+        'navigation_pivot' => 'bool',
     ];
 
     /**
